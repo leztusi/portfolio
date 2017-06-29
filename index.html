@@ -5,9 +5,8 @@
 html
 {
 font-family: 'Roboto', sans-serif;
-font-weight:100;
 color: white;
-background-color : white;
+font-size: 14px;
 }
 
 #Contents
@@ -18,10 +17,11 @@ background-color : white;
 #Header
 {
   padding: 60px;
-  border-width: 10px;
-  height : 300px;
+  height : 520px;
   position : absolute;
   top: 0; right: 0; bottom: 0; left: 0;
+  
+  margin : auto;
   
   background-image: url("src-img/Header.jpg");
   background-attachment: fixed;
@@ -36,13 +36,14 @@ background-color : white;
 
 #AboutMe
 {
+
   padding: 60px;
-  border-width: 10px;
-  height : 300px;
+  height : 450px;
   position : absolute;
-  top: 420px; right: 0; bottom: 0; left: 0;
+  top: 640px; right: 0; bottom: 0; left: 0;
   
-  background-image: url("src-img/15016439_1333683909983791_5930940257510307984_o.jpg");
+  //background-image: url("src-img/Terra_Climb.jpg");
+  background-color: white;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,16 +54,41 @@ background-color : white;
   box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
 }
 
+#MyWorks
+{
+  padding: 60px;
+  border-width: 10px;
+  height : 520px;
+  position : absolute;
+  top: 1210px; right: 0; bottom: 0; left: 0;
+  
+  //background-image: url("src-img/in_the_end____by_boblester122-da7tfuw.png");
+  background-image: url("src-img/Terra_Climb.jpg");
+  background-color: 595959;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  -webkit-box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
+}
+
+.CircularImg
+{
+border-radius: 50%;
+}
+
+.LeftP
+{
+Width : 920px;
+}
+
 h1
 {
 font-weight:100;
 font-size: 90px;
-}
-
-h2
-{
-font-weight:100;
-font-size: 45px;
 }
 
 p
@@ -76,7 +102,59 @@ ch1
 font-size : 28px;
 }
 
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+ch2
+{
+font-weight:100;
+font-size: 60px;
+padding=0px;
+}
+
+ch3
+{
+font-weight:300;
+font-size: 30px;
+padding=0px;
+color:36b48f;
+}
+
+#Row
+{
+  margin: auto;
+  vertical-align: middle; 
+}
+
+#Block1
+{
+  position : relative;
+  top: 0; right: 0; bottom: 0; left: 0;
+
+  display: inline-block;
+  width : 33.333%;
+  color: black;
+  vertical-align: middle; 
+  
+  font-family: "Roboto", "Sans-Serif";
+  font-weight:100;
+  font-size: 12px;
+}
+
+#Block2
+{
+  display: inline-block;
+  vertical-align: middle; 
+  padding: 30px;
+}
+
+#Line{
+  height : 1px;
+  background-color : 36b48f;
+}
+
+#LineWhite{
+  height : .5px;
+  background-color : white;
+  width : 70%;
+}
 
 </style>
 
@@ -88,24 +166,68 @@ font-size : 28px;
 <center>
 <h1>
 Bob Lester Tusi</br>
+<div id="LineWhite"></div>
 <ch1>Game Developer & Graphic Designer</ch1>
 </h1>
-
-
-<a href="http://facebook.com/leztusi"><img src="src-img/icons/1498737620_facebook_online_social_media.png" height="32px" width="32px"></img></a>
-<a href="http://twitter.com/lestertusi"><img src="src-img/icons/1498737536_online_social_media_twitter.png" height="32px" width="32px"></img></a>
-
 </center>
 </div>
+
 <div id ="AboutMe">
-<h2>About Me</h2>
+<center>
+<ch2 style="color:36b48f;">Profile</ch2>
+</br></br><div id="line"></div>
 <p>
-I'm from Las Piñas City who's very passionate about programming and game development. </br>
-I was awarded with best IT capstone during college and later became a part-time College Instructor teaching game development. </br>
-I've been using Unity and Visual Studio (.net) since 2013. </br>
-I also do graphics design with photoshop, Illustrator, 3D animation with 3ds max and 3D modeling with blender so i can prototype games effectively. </br>
+<div id="Row">
+
+<div id="Block1">
+<p style="text-align:right; font-size=16px;">
+<ch3>About Me</ch3></br>
+I'm very passionate about programming and game development.
+I was awarded with best IT capstone during college
+and later became a part-time College Instructor teaching game development.
+I've been using Unity and Visual Studio (.net) since 2013.
+I also do graphics design with photoshop, Illustrator, 3D animation with
+3ds max and 3D modeling with blender so i can prototype games effectively.
 </p>
 </div>
+
+<div id="Block2">
+<center>
+<img class="CircularImg" src="src-img/11178306_972121329473386_5222349062198463851_n.jpg"></img>
+</center>
+</div>
+
+<div id="Block1">
+<p style="text-align:left;">
+<ch3>Details</ch3></br>
+<b>Name:</b></br>
+Bob Lester Tusi</br>
+<b>Age:</b></br>
+21 years</br>
+<b>Location:</b></br>
+Tanza, Cavite, Philippines</br>
+<a href="http://facebook.com/leztusi"><img src="src-img/icons/1498737620_facebook_online_social_media.png" height="32px" width="32px"></img></a>
+<a href="http://twitter.com/lestertusi"><img src="src-img/icons/1498737536_online_social_media_twitter.png" height="32px" width="32px"></img></a>
+</p>
+</div>
+
+</div>
+
+</p>
+
+</center>
+
+</div>
+<div id ="MyWorks">
+<ch2>My Works</ch2>
+
+<center>
+<h1> Work In Progess </h1>
+<p>Sorry About That...</p>
+<center>
+
+</div>
+
 </div>
 
 <Body>
