@@ -6,7 +6,7 @@ html
 {
 font-family: 'Roboto', sans-serif;
 color: white;
-font-size: 14px;
+font-size: 14px auto;
 }
 
 #Contents
@@ -14,65 +14,56 @@ font-size: 14px;
   display: block;
 }
 
+body {    
+    margin: 0 !important;
+    padding: 0 !important;
+	color: 5A5A5F;
+}
+
 #Header
 {
-  padding: 60px;
-  height : 520px;
-  position : absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  height : 85%;
+  width : 100%;
+  position : relative;
   
-  margin : auto;
+  padding-top: 8%;
   
   background-image: url("src-img/Header.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
-  -webkit-box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
 }
 
 #AboutMe
 {
 
-  padding: 60px;
-  height : 450px;
-  position : absolute;
-  top: 640px; right: 0; bottom: 0; left: 0;
-  
-  //background-image: url("src-img/Terra_Climb.jpg");
-  background-color: white;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-  -webkit-box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
 }
 
 #MyWorks
 {
-  padding: 60px;
-  border-width: 10px;
-  height : 520px;
-  position : absolute;
-  top: 1210px; right: 0; bottom: 0; left: 0;
-  
-  //background-image: url("src-img/in_the_end____by_boblester122-da7tfuw.png");
-  background-image: url("src-img/Terra_Climb.jpg");
-  background-color: 595959;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-  -webkit-box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 70px 5px rgba(0,0,0,0.75);
+  background-color:F5F8F9;
+  color: 5A5A5F;
+  padding: 45px;
+}
+
+#Footer
+{
+  background-color:F5F8F9;
+  color: white;
+  padding: 10px;
+  background-color:222C37;
+  -webkit-box-shadow: 0px 0px 77px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 77px -7px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 77px -7px rgba(0,0,0,0.75);
+}
+
+.copyright {
+    float: left;
+}
+
+.social { 
+    float: right;
 }
 
 .CircularImg
@@ -88,25 +79,26 @@ Width : 920px;
 h1
 {
 font-weight:100;
-font-size: 90px;
+font-size: 10vw;
+color:white;
 }
 
 p
 {
 font-weight:100;
-font-size: 22px;
 }
 
 ch1
 {
-font-size : 28px;
+  font-size : 3vw;
+  color: white;
 }
 
 ch2
 {
 font-weight:100;
 font-size: 60px;
-padding=0px;
+color:5A5A5F
 }
 
 ch3
@@ -114,24 +106,22 @@ ch3
 font-weight:300;
 font-size: 30px;
 padding=0px;
-color:36b48f;
+color:26C6DA;
 }
 
 #Row
 {
   margin: auto;
-  vertical-align: middle; 
+  vertical-align: top;
 }
-
 #Block1
 {
   position : relative;
   top: 0; right: 0; bottom: 0; left: 0;
-
   display: inline-block;
-  width : 33.333%;
+  width : 30%;
   color: black;
-  vertical-align: middle; 
+  vertical-align: top; 
   
   font-family: "Roboto", "Sans-Serif";
   font-weight:100;
@@ -141,19 +131,43 @@ color:36b48f;
 #Block2
 {
   display: inline-block;
-  vertical-align: middle; 
-  padding: 30px;
+  vertical-align: top; 
+  padding: 20px;
+}
+
+#Bar{
+  height : 20px;
+  background-color : 26C6DA;
 }
 
 #Line{
   height : 1px;
-  background-color : 36b48f;
+  background-color : 26C6DA;
 }
 
 #LineWhite{
   height : .5px;
   background-color : white;
   width : 70%;
+}
+
+#photos {
+  /* Prevent vertical gaps */
+  line-height: 0;
+   
+  -webkit-column-count: 3;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    3;
+  -moz-column-gap:      0px;
+  column-count:         3;
+  column-gap:           0px;  
+}
+
+#photos img {
+  margin: auto;
+  width: 100% !important;
+  height: auto !important;
+  margin: 5px;
 }
 
 </style>
@@ -166,7 +180,6 @@ color:36b48f;
 <center>
 <h1>
 Bob Lester Tusi</br>
-<div id="LineWhite"></div>
 <ch1>Game Developer & Graphic Designer</ch1>
 </h1>
 </center>
@@ -174,18 +187,24 @@ Bob Lester Tusi</br>
 
 <div id ="AboutMe">
 <center>
-<ch2 style="color:36b48f;">Profile</ch2>
+<div id="Bar"></div>
+<br>
+<ch2 style="color:26C6DA;">Profile</ch2>
 </br></br><div id="line"></div>
+<p>
+<center>
 <p>
 <div id="Row">
 
 <div id="Block1">
-<p style="text-align:right; font-size=16px;">
+<p style="text-align:justify; font-size:1.3vw;">
 <ch3>About Me</ch3></br>
 I'm very passionate about programming and game development.
 I was awarded with best IT capstone during college
 and later became a part-time College Instructor teaching game development.
-I've been using Unity and Visual Studio (.net) since 2013.
+I've been using Unity and Visual Studio (.net) since 2013 and loved developing ever since.
+I became one of the developers of Disaster Squad, a small group of indie gamedevs.
+We develop video games on our spare time and learned a lot from it.
 I also do graphics design with photoshop, Illustrator, 3D animation with
 3ds max and 3D modeling with blender so i can prototype games effectively.
 </p>
@@ -193,12 +212,12 @@ I also do graphics design with photoshop, Illustrator, 3D animation with
 
 <div id="Block2">
 <center>
-<img class="CircularImg" src="src-img/11178306_972121329473386_5222349062198463851_n.jpg"></img>
+<img class="CircularImg" src="src-img/profile.jpg"></img>
 </center>
 </div>
 
 <div id="Block1">
-<p style="text-align:left;">
+<p style="text-align:justify; font-size:1.3vw;">
 <ch3>Details</ch3></br>
 <b>Name:</b></br>
 Bob Lester Tusi</br>
@@ -210,22 +229,82 @@ Tanza, Cavite, Philippines</br>
 <a href="http://twitter.com/lestertusi"><img src="src-img/icons/1498737536_online_social_media_twitter.png" height="32px" width="32px"></img></a>
 </p>
 </div>
-
+<br>
 </div>
 
 </p>
+</center>
 
+</p>
+<div id="Bar"></div>
 </center>
 
 </div>
+
 <div id ="MyWorks">
-<ch2>My Works</ch2>
+<ch2 style="color:26C6DA;">My Works</ch2>
+</br></br><div id="line"></div></br>
+<section id="photos">
+  <a target="_blank" href="src-img/art (1).png">
+	<img src="src-img/art (1).png"></img>
+  </a>
+  <a target="_blank" href="src-img/art (2).png">
+	<img src="src-img/art (2).png">
+  </a>
+  <a target="_blank" href="src-img/art (3).png">
+	<img src="src-img/art (3).png"></img>
+  </a>
+  <a target="_blank" href="src-img/art (4).png">
+	<img src="src-img/art (4).png">
+  </a>
+  <a target="_blank" href="src-img/art (5).png">
+	<img src="src-img/art (5).png">
+  </a>
+  <a target="_blank" href="src-img/art (6).png">
+	<img src="src-img/art (6).png">
+  </a>
+  <a target="_blank" href="src-img/art (7).png">
+	<img src="src-img/art (7).png">
+  </a>
+  <a target="_blank" href="src-img/art (8).png">
+	<img src="src-img/art (8).png">
+  </a>
+  <a target="_blank" href="src-img/art (9).png">
+	<img src="src-img/art (9).png">
+  </a>
+  <a target="_blank" href="src-img/art (10).png">
+	<img src="src-img/art (10).png">
+  </a>
+  <a target="_blank" href="src-img/art (12).png">
+	<img src="src-img/art (12).png">
+  </a>
+  <a target="_blank" href="src-img/art (13).png">
+	<img src="src-img/art (13).png">
+  </a>
+  <a target="_blank" href="src-img/art (14).png">
+	<img src="src-img/art (14).png">
+  </a>
+    <a target="_blank" href="src-img/art (15).png">
+	<img src="src-img/art (15).png">
+  </a>
+  <a target="_blank" href="src-img/art (16).png">
+	<img src="src-img/art (16).png">
+  </a>
+</section>
 
-<center>
-<h1> Work In Progess </h1>
-<p>Sorry About That...</p>
-<center>
+</div>
 
+<div id="footer">
+    <p class="copyright" style="font-size:12px;">
+	</p>
+    <p class="social" style="text-align:right; font-size:12px;">
+	Webpage designed, and developed by Bob Lester Tusi<br>
+	<b>Contact</b><br>
+	Leztusi@gmail.com<br><br>
+	<a href="http://facebook.com/leztusi"><img src="src-img/icons/1498737620_facebook_online_social_media.png" height="32px" width="32px"></img></a>
+	<a href="http://twitter.com/lestertusi"><img src="src-img/icons/1498737536_online_social_media_twitter.png" height="32px" width="32px"></img></a>
+	</p>
+    <div style="clear: both"></div>
 </div>
 
 </div>
