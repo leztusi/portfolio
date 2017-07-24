@@ -1,5 +1,35 @@
 <html>
 
+<script>
+
+var slideIndex = 1;
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+showSlides(slideIndex);
+</script>
 
 <style>
 
@@ -80,11 +110,31 @@ padding-left:10px;
   background-repeat: repeat;
 }
 
-#CT_TITLE
+#cf
 {
-	background-image: url("clips/CT_TITLE.png");
-	width : 1200px;
-	height : 118px;
+  height:118px;
+  width:1200px;
+}
+
+#cf img
+{
+  position:absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+#cf img.bottom
+{
+  animation: mymove 1s infinite;
+}
+
+@keyframes mymove
+{
+    0%   {opacity:0;}
+    50%  {opacity:1;}
+    100% {opacity:0;}
 }
 
 
@@ -216,6 +266,103 @@ color:26C6DA;
   height: auto !important;
 }
 
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  float: left;
+  
+  -webkit-box-shadow: 0px 0px 28px 2px rgba(162,214,242,1);
+-moz-box-shadow: 0px 0px 28px 2px rgba(162,214,242,1);
+box-shadow: 0px 0px 28px 2px rgba(162,214,242,1);
+}
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
 </style>
 
 <title>Bob Lester Tusi</title>
@@ -301,93 +448,129 @@ Here's the project(s) i worked/working on.
 <div id="Bar"></div>
 <div id="MyProjects">
 <center>
-<div id="CT_TITLE"></div>
+
+<div id="cf">
+  <img class="bottom" src="clips/CT_TITLE_HOVER.png" />
+  <img class="top" src="clips/CT_TITLE.png" />
+</div>
+
 </center>
 
 <p style="color:white">
-<left_img><img src="clips/Game_Preview.PNG" height="400px" width="720"></img></left_img>
+<left_img>
+
+<div class="slideshow-container">
+
+<center>
+
+  <div class="mySlides fade">
+    <img src="clips/Preview (1).jpg" height="400px" width="720"></img>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="clips/Preview (2).jpg" height="400px" width="720"></img>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="clips/Preview (3).jpg" height="400px" width="720"></img>
+  </div>
+  
+  <div class="mySlides fade">
+	  <video height="400px" width="720" autoplay loop controls>
+	  <source src="clips/CT clip (4).mp4" type="video/mp4">
+	  Your browser does not support the video tag.
+	  </video>
+  </div>
+  
+    <div class="mySlides fade">
+	  <video height="400px" width="720" autoplay loop controls>
+	  <source src="clips/CT clip (3).mp4" type="video/mp4">
+	  Your browser does not support the video tag.
+	  </video>
+  </div>
+  
+    <div class="mySlides fade">
+	  <video height="400px" width="720" autoplay loop controls>
+	  <source src="clips/CT clip (1).mp4" type="video/mp4">
+	  Your browser does not support the video tag.
+	  </video>
+  </div>
+  
+    <div class="mySlides fade">
+	  <video height="400px" width="720" autoplay loop controls>
+	  <source src="clips/CT clip (5).mp4" type="video/mp4">
+	  Your browser does not support the video tag.
+	  </video>
+  </div>
+  
+    <div class="mySlides fade">
+	  <video height="400px" width="720" autoplay loop controls>
+	  <source src="clips/CT clip (9).mp4" type="video/mp4">
+	  Your browser does not support the video tag.
+	  </video>
+  </div>
+  
+    <div class="mySlides fade">
+	  <video height="400px" width="720" autoplay loop controls>
+	  <source src="clips/CT clip (10).mp4" type="video/mp4">
+	  Your browser does not support the video tag.
+	  </video>
+  </div>
+  
+    <div class="mySlides fade">
+	  <video height="400px" width="720" autoplay loop controls>
+	  <source src="clips/CT clip (2).mp4" type="video/mp4">
+	  Your browser does not support the video tag.
+	  </video>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="clips/Preview (0).jpg" height="400px" width="720"></img>
+  </div>
+  
+  </center>
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span>
+		<span class="dot" onclick="currentSlide(4)"></span> 
+		<span class="dot" onclick="currentSlide(5)"></span> 
+		<span class="dot" onclick="currentSlide(6)"></span> 
+		<span class="dot" onclick="currentSlide(7)"></span> 
+		<span class="dot" onclick="currentSlide(8)"></span> 
+		<span class="dot" onclick="currentSlide(9)"></span>
+		<span class="dot" onclick="currentSlide(10)"></span>
+		<span class="dot" onclick="currentSlide(0)"></span> 
+	</div>
+
+</div>
+
+</left_img>
+
+<p style="color:white; padding-left:750px;">
 Cognitio Terra is a fast paced video game mixed with math games originally made by Bob Lester Tusi for his final IT Capstone (Thesis).
 Despite the experimental gameplay, The Thesis version was preached and recieved good feedback from the panelists and the project was awarded with Best IT Capstone project in 2016.
 The project was later continued with Disaster Squad Games, a small indie game studio consists 5 members in which Bob is the Lead Developer who mainly works on gameplay programming, animations, lighting and special effects. 
 <br><br>
-Gameplay <br>
+<ch3 style="color:white;">Gameplay</ch3> <br>
+<p style="color:white; padding-left:750px;">
 You play as Terra, who uses CORE to Assist her and "calculate" her actions on critical scenarios,
 giving her great reflexes and more acurate attacks.
+</p>
 <br><br>
-<center><p style="color:white">Cognitio Terra is Made with Unity and still under development.</center>
-<br>
+<center><p style="color:white">
+Cognitio Terra is Made with Unity and still under development.<br>
+The Following Clips and Images does not represent the final product.
+</center>
 </p>
 
+<br><br><br>
 </div>
 
-<div id="CT_IMAGES">
-
-<center><p style="color:white">The following clips and images does not represent the final product.</p></center>
-
-<section id="photos">
-
-<video width="320" height="240" autoplay loop  controls>
-  <source src="clips/CT clip (1).mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-<video width="320" height="240" autoplay loop controls>
-  <source src="clips/CT clip (2).mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-<video width="320" height="240" autoplay loop controls>
-  <source src="clips/CT clip (3).mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-<video width="320" height="240" autoplay loop controls>
-  <source src="clips/CT clip (4).mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-<img src="clips/pic1.jpg">
-
-<video width="320" height="240" autoplay loop controls>
-  <source src="clips/CT clip (5).mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-<video width="320" height="240" autoplay loop controls>
-  <source src="clips/CT clip (6).mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-<video width="320" height="240" autoplay loop controls>
-  <source src="clips/CT clip (11).mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-<video width="320" height="240" autoplay loop controls>
-  <source src="clips/CT clip (7).mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-<video width="320" height="240" autoplay loop controls>
-  <source src="clips/CT clip (8).mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-<img src="clips/pic2.jpg">
-
-<video width="640" height="480" autoplay loop controls>
-  <source src="clips/CT clip (9).mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-<video width="320" height="240" autoplay loop controls>
-  <source src="clips/CT clip (10).mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-</section>
-
-</div>
 
 <div id="Bar"></div>
 <div id="Bar"></div>
@@ -459,7 +642,7 @@ Your browser does not support the video tag.
 
 </div>
 
-<Body>
+<Body onload="currentSlide(11)">
 </Body>
 
 </html>
